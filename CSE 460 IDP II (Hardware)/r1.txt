@@ -1,0 +1,5 @@
+sudo apt-get -y purge libreoffice*
+
+sudo apt-get -y remove x264 libx264-dev
+
+
