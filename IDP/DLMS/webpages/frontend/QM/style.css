@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  background: #aaeafb;
+}
+.icon-red{
+  color : #f00;
+}
+.icon-ash{
+  color : #333;
+}
+.icon-blue{
+  color: #00f;
+}
+.icon-black{
+  color: #000;
+}
+.icon-green{
+  color: #0f0;
+}
+.icon-white{
+  color: #fff;
+}
+.main-box{
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 650px;
+  text-align: center;
+}
+.main-box .content{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.content .box{
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.share, .cancel{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #2980b9;
+  line-height: 50px;
+  background: #fff;
+  letter-spacing: 1px;
+  border-radius: 25px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.content .box .share{
+  opacity: 1;
+}
+#check:checked ~ .box .share{
+  opacity: 0;
+}
+#check:checked ~ .box .cancel{
+  opacity: 1;
+}
+.content .image-box{
+  position: absolute;
+  height: 450px;
+  width: 100%;
+  bottom: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: 10px;
+  border-radius: 25px;
+  transition: all 0.4s ease;
+}
+#check:checked ~ .image-box{
+  bottom: 70px;
+}
+#check{
+  display: none;
+}
+.image-box::before{
+  position: absolute;
+  content: '';
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  height: 30px;
+  width: 30px;
+  background: #fff;
+  z-index: -1;
+}
+.image-box img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 26px;
+}
+.image-box .about{
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 25px;
+  padding: 20px;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+#check:checked ~ .image-box .about{
+  opacity: 1;
+}
+.about .details{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 50px;
+}
+.details .name, .job{
+  font-size: 24px;
+  font-weight: 500;
+  height: 75px;
+  color: #000;
+}
+ .details .icon i{
+   font-size: 22px;
+   height: 45px;
+   width: 45px;
+   line-height: 43px;
+   border-radius: 50%;
+   border: 3px solid #000;
+   margin: 14px 10px;
+   transition: all 0.3s ease;
+ }
+.details .icon i:hover{
+  transform: scale(0.95);
+}
